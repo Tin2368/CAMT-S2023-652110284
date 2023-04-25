@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .dashedbox {
+            margin: 10px;
+            padding: 20px;
+            border: 1px  dashed gray;
+            background-color: azure;
+        }
+        .pinkbox {
+            padding: 20px;
+            background-color: pink;
+        }
+        .orangebox {
+            padding: 20px;
+            background-color: orange;
+        }
+        .yellowbox {
+            padding: 20px;
+            background-color: yellow;
+        }
+        .greenbox {
+            padding: 20px;
+            background-color: green;
+        }
+        .purplebox {
+            padding: 20px;
+            background-color: purple;
+        }
+        .redbox {
+            padding: 20px;
+            background-color: red;
+        }
+
+        .inline{
+            display: inline-flex;
+        }
+        nav li {
+            display: inline-block;
+        }
+        .Orange {
+            display: none;
+        }
+        .Papaya {
+            visibility: hidden;
+        }
+        
+
+
+
+        .bluebox {
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+            position: static;
+        }
+
+        .fixed-wh .dashedbox .bluebox{
+            position: absolute;
+            height: 100px;
+            width: 400px;
+           
+        }
+
+        .nofixed-wh {
+            position: absolute;
+            width: 100%;
+       
+        }
+        .nofixed-wh .bluebox {
+            width: 100%;
+            height: unset;
+            padding: 2px;
+        }
+        .whitebox {
+                padding: 100px;
+                background-color: white;
+        }
+        .whitebox b {
+            border-radius: 50px;
+            background-color: gray;
+            padding: 10px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            color: white;
+        }
+
+        .floatsongkran {
+            position: fixed;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+          
+        }
+
+        .box {
+            position: absolute;
+            background-color: palevioletred;
+            color: white;
+            padding: 50px;
+            text-align: center;
+            transform: translateY(-50%);
+            top: 50%;
+            left: 37.5%;
+          
+        }
+
+    </style>
+<body>
+
+    <div class="floatsongkran">
+        <div class="box">
+            <h1>Songkran Festival 2023</h1>
+        </div>
+    
+</div>
+    <h1>Box Model</h1>
+    <div class="dashedbox">
+        <div class="pinkbox">
+            <div class="orangebox">
+                <div class="yellowbox">
+                    <div class="greenbox"><h3>Simple Box</h3></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    <h1>CSS Display</h1>
+    <br>
+    <h2>inline</h2>
+    <br>
+    <div class="dashedbox">
+        <div class="inline">
+            <div class="yellowbox">inline text1</div>
+            <div class="orangebox">inline text2</div>
+            <div class="redbox">inline text3</div>
+            <div class="greenbox">inline text3</div>
+            <div class="purplebox">inline text3</div>
+        </div>
+    </div>
+    <br>
+    
+    <h2>Block</h2>
+    <br>
+    <div class="dashedbox">
+        <div class="block">
+            <div class="yellowbox">block text1</div>
+            <div class="orangebox">block text2</div>
+            <div class="redbox">   block text3</div>
+            <div class="greenbox"> block text3</div>
+            <div class="purplebox"> block text3</div>
+        </div>   
+    </div>
+    <br>
+
+    <h2>inline-block</h2>
+    <br>
+    <div class="dashedbox">
+        <nav>
+            <li><h3>Apple</h3></li>
+            <li><h3>Papaya</h3></li>
+            <li><h3>Banana</h3></li>
+            <li><h3>Orange</h3></li>
+        </nav>   
+    </div>
+
+    <h2>none</h2>
+    <br>
+    <div class="dashedbox">
+        <nav>
+            <li><h3>Apple</h3></li>
+            <li><h3>Papaya</h3></li>
+            <li><h3>Banana</h3></li>
+            <li class="Orange"><h3>Orange</h3></li>
+        </nav> 
+    </div>
+
+    <h2>display:none vs visibility:hidden</h2>
+    <br>
+    <div class="dashedbox">
+        <nav>
+            <li><h3>Apple</h3></li>
+            <li class="Papaya"><h3>Papaya</h3></li>
+            <li><h3>Banana</h3></li>
+            <li class="Orange"><h3>Orange</h3></li>
+        </nav> 
+    </div>
+    
+    <h1>CSS Position</h1>
+    <br>
+    <h2>static</h2>
+    <br>
+    <div class="static-content">
+        <div class="dashedbox">
+            <div class="bluebox"></div>
+        </div>
+    </div>
+    
+
+    <h2>absolute</h2>
+    <br>
+    <h3>fixed width/height</h3>
+    <div class="fixed-wh">
+        <div class="dashedbox">
+            <div class="bluebox"></div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>no fixed width/height</h3>
+    <div class="nofixed-wh">
+        <div class="dashedbox">
+            <div class="bluebox"></div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h3>fixed width/height + right-top</h3>
+    <div class="fixed-wh-rt">
+        <div class="dashedbox">
+            <div class="whitebox">
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
